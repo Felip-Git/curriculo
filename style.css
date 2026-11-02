@@ -355,8 +355,83 @@ body {
     .coluna-esquerda {
         width: 100%;
     }
+    
 
     .coluna-direita {
         width: 100%;
+    }
+}
+
+
+/* BOTÃO PARA SALVAR EM PDF */
+
+.botao-pdf {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #172638;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.botao-pdf:hover {
+    background: #263d56;
+    transform: translateY(-2px);
+}
+
+.botao-pdf svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* AJUSTES DE IMPRESSÃO */
+
+@media print {
+    .botao-pdf {
+        display: none !important;
+    }
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+    }
+
+    .curriculo {
+        width: 750px;
+        min-height: 0;
+        margin: 0 auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .conteudo,
+    .perfil,
+    .experiencia-item,
+    .formacao-item {
+        break-inside: avoid;
+    }
+
+    a {
+        color: #111111;
+        text-decoration: none;
     }
 }
