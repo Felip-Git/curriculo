@@ -245,6 +245,14 @@
         </svg>
         Salvar em PDF
     </button>
+<script>
+    const parametros = new URLSearchParams(window.location.search);
 
+    if (parametros.get("imprimir") === "1") {
+        window.addEventListener("load", () => {
+            window.print();
+        });
+    }
+</script>
 </body>
 </html>
