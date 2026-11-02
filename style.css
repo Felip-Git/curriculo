@@ -311,9 +311,9 @@ body {
         background: #ffffff;
     }
     /* Oculta o botão quando o currículo estiver incorporado no portfólio */
-html.embedded .botao-pdf {
+    html.embedded .botao-pdf {
     display: none !important;
-}
+    }
     .curriculo {
         margin: 0;
         box-shadow: none;
