@@ -310,10 +310,7 @@ body {
     body {
         background: #ffffff;
     }
-    /* Oculta o botão quando o currículo estiver incorporado no portfólio */
-    html.embedded .botao-pdf {
-    display: none !important;
-    }
+   
     .curriculo {
         margin: 0;
         box-shadow: none;
@@ -402,4 +399,9 @@ body {
 
 .botao-pdf:hover {
     background: #263d56;
+}
+
+/* Oculta o botão quando o currículo estiver incorporado */
+html.embedded .botao-pdf {
+    display: none !important;
 }
