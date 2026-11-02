@@ -248,6 +248,10 @@
 <script>
     const parametros = new URLSearchParams(window.location.search);
 
+    if (window.self !== window.top) {
+        document.documentElement.classList.add("embedded");
+    }
+
     if (parametros.get("imprimir") === "1") {
         window.addEventListener("load", () => {
             window.print();
